@@ -37,8 +37,8 @@ namespace LoginRegister
 
         private void btnHomeLecturer_Click(object sender, EventArgs e)
         {
-            LoginRegister loginRegister = new LoginRegister();
-            loginRegister.Show();
+            LecturerManagement lecturerManagement = new LecturerManagement();
+            lecturerManagement.Show();
             this.Hide();
         }
     }

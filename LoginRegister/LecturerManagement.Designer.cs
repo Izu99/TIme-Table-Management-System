@@ -69,6 +69,7 @@
             this.logoAnimator = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -500,6 +501,7 @@
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
             this.txtSearch.Size = new System.Drawing.Size(221, 33);
             this.txtSearch.TabIndex = 11;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // sidemenu
             // 
@@ -953,6 +955,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2ShadowPanel1);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientPanel2);
             this.guna2CustomGradientPanel1.Controls.Add(this.dgvLecturer);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnSearch);
             this.guna2CustomGradientPanel1.Controls.Add(this.txtSearch);
             this.btnAnimator.SetDecoration(this.guna2CustomGradientPanel1, BunifuAnimatorNS.DecorationType.None);
             this.logoAnimator.SetDecoration(this.guna2CustomGradientPanel1, BunifuAnimatorNS.DecorationType.None);
@@ -979,6 +982,36 @@
             this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
             this.guna2GradientPanel2.Size = new System.Drawing.Size(1286, 4);
             this.guna2GradientPanel2.TabIndex = 15;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Animated = true;
+            this.btnSearch.AutoRoundedCorners = true;
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BorderRadius = 16;
+            this.btnSearch.CheckedState.Parent = this.btnSearch;
+            this.btnSearch.CustomImages.Parent = this.btnSearch;
+            this.btnAnimator.SetDecoration(this.btnSearch, BunifuAnimatorNS.DecorationType.None);
+            this.logoAnimator.SetDecoration(this.btnSearch, BunifuAnimatorNS.DecorationType.None);
+            this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(140)))), ((int)(((byte)(255)))));
+            this.btnSearch.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(77)))), ((int)(((byte)(240)))));
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.btnSearch.HoverState.BorderColor = System.Drawing.Color.White;
+            this.btnSearch.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(90)))), ((int)(((byte)(250)))));
+            this.btnSearch.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(75)))), ((int)(((byte)(236)))));
+            this.btnSearch.HoverState.Parent = this.btnSearch;
+            this.btnSearch.IndicateFocus = true;
+            this.btnSearch.Location = new System.Drawing.Point(835, 49);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.ShadowDecoration.Parent = this.btnSearch;
+            this.btnSearch.Size = new System.Drawing.Size(140, 35);
+            this.btnSearch.TabIndex = 20;
+            this.btnSearch.Text = "Save";
+            this.btnSearch.UseTransparentBackground = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // guna2GradientPanel1
             // 
@@ -1274,5 +1307,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnClear;
         private Guna.UI2.WinForms.Guna2GradientButton btnSave;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSearch;
     }
 }
